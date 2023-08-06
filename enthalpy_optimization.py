@@ -32,7 +32,7 @@ def main():
     # Sidebar for mole fractions
     st.sidebar.header("Mole Fractions of Alloy Components (The mole fraction must represent the same alloy composition of the H-T dataset)")
     mole_fractions = {}
-    elements = ['Ag', 'Au', 'Ni', 'Cu', 'Sn']
+    elements = ['Ag', 'Au','Bi', 'In', 'Ni', 'Cu', 'Sn']
     for element in elements:
         mole_fractions[element] = st.sidebar.number_input(f"{element} mole fraction", value=0.0, min_value=0.0, max_value=1.0)
 
