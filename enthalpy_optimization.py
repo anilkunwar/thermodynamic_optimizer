@@ -32,7 +32,7 @@ def main():
     # Sidebar for mole fractions
     st.sidebar.header("Mole Fractions of Alloy Components (The mole fraction must represent the same alloy composition of the H-T dataset)")
     mole_fractions = {}
-    elements = ['Ag', 'Au','Bi', 'Cu', 'In', 'Ni', 'Pb',  'Sn']
+    elements = ['Ag', 'Al', 'Au','Bi', 'Cu', 'In', 'Ni', 'Pb',  'Sn', 'Ti', 'V']
     for element in elements:
         mole_fractions[element] = st.sidebar.number_input(f"{element} mole fraction", value=0.0, min_value=0.0, max_value=1.0)
 
@@ -76,13 +76,16 @@ def main():
         mole_fractions_list = [mole_fractions[element] for element in elements]
         combined_data = {
             'xAg': mole_fractions_list[0],
-            'xAu': mole_fractions_list[1],
-            'xBi': mole_fractions_list[2],
-            'xCu': mole_fractions_list[3],
-            'xIn': mole_fractions_list[4],
-            'xNi': mole_fractions_list[5],
-            'xPb': mole_fractions_list[6],
-            'xSn': mole_fractions_list[7],
+            'xAl': mole_fractions_list[1],
+            'xAu': mole_fractions_list[2],
+            'xBi': mole_fractions_list[3],
+            'xCu': mole_fractions_list[4],
+            'xIn': mole_fractions_list[5],
+            'xNi': mole_fractions_list[6],
+            'xPb': mole_fractions_list[7],
+            'xSn': mole_fractions_list[8],
+            'xTi': mole_fractions_list[9],
+            'xV': mole_fractions_list[10],
             'A1': A1_fit,
             'A2': A2_fit,
             'Tm (K)': Tm_fit,
