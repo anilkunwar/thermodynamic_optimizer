@@ -17,7 +17,7 @@ def main():
     st.title("Enthalpy-Temperature Relationship")
 
     # File upload
-    st.header("Upload CSV file with 'T' and 'H' columns")
+    st.header("Upload CSV file with 'S.N.', 'T' and 'H' columns")
     uploaded_file = st.file_uploader("Choose a CSV file", type=["csv"])
 
     # Sidebar for initial guess coefficients and mole fractions
